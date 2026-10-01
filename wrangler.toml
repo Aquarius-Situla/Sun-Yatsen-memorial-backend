@@ -1,0 +1,14 @@
+name = "sys-memorial-backend"
+main = "workers.js"
+compatibility_date = "2024-09-01"
+
+# 綁定 Cloudflare Workers KV 命名空間
+# 請將 id 與 preview_id 替換為您在 Cloudflare Dashboard 中建立的 KV Namespace ID
+[[kv_namespaces]]
+binding = "MEMORIAL_KV"
+id = "YOUR_KV_NAMESPACE_ID"
+# preview_id = "YOUR_PREVIEW_KV_NAMESPACE_ID"
+
+# 預設環境變數 (敏感密鑰如 ADMIN_SECRET 建議使用 `wrangler secret put ADMIN_SECRET` 注入)
+[vars]
+# ADMIN_SECRET = "SunYatSen1911"
